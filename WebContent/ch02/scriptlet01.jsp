@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert title here</title>
+<title>Scripting Tag</title>
 </head>
 <body>
 	<%	//스크립틀릿

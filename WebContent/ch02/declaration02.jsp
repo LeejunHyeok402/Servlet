@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scripting Tag</title>
+</head>
+<body>
+	<%!	//선언문 태그
+		//전역 메소드
+	 	int sum(int a,int b){
+		return a+b;
+	}
+	%>
+	<%	//스크립틀릿 태그
+		//여기서 선언된 sum() 메소드는 선언문 태그에 선언된 전역 메소드인
+		//sum()을 호출함
+		out.println("2+3 = "+sum(2,3));
+	%>
+</body>
+</html>

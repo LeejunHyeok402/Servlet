@@ -74,7 +74,7 @@ public class ProductRepository {
 		//listOfProducts의 크기만큼 반복
 		for(int i = 0; i < listOfProducts.size();i++) {
 			ProductVO vo = listOfProducts.get(i);
-			if(vo!= null && vo.getProductId() == null && vo.getProductId().equals(productId)) {
+			if(vo != null && vo.getProductId() != null && vo.getProductId().equals(productId)) {
 				productById = vo;
 				//반복문을 빠져나옴
 				break;

@@ -3,6 +3,7 @@ package example04.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import ch04.vo.ProductVO;
 import example04.vo.BookVO;
 
 public class BookRepository {
@@ -60,5 +61,23 @@ public class BookRepository {
 	
 	public List<BookVO> getAllBooks(){
 		return bookList;
+	}
+	
+	public void addProduct(BookVO book)
+	{
+		bookList.add(book);
+	}
+	
+	public BookVO getBookById(String bookId) {
+		
+		BookVO bookById = null;
+		for(int i = 0; i < bookList.size();i++) {
+			BookVO vo = bookList.get(i);
+			if(vo != null && vo.getBookId() != null && vo.getBookId() .equals(bookId)) {
+				bookById = vo;	
+				break;
+			}
+		}
+		return bookById;
 	}
 }

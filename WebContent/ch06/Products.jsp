@@ -32,6 +32,9 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	</div>
 	
 	<div class="container">
+		<div class="row" align="right"  style="justify-content:right;margin:0 0 30px 0">
+		<a href="addProduct.jsp" class="btn btn-primary">상품추가</a>
+		</div>
 		<div class="row" align="center">
 			<!-- List<ProductVO> -> 한행을 까네오면 -> productVO -->
 			<c:forEach var="productVO" items="${listOfProducts}">
@@ -41,7 +44,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 					<p>${productVO.unitPrice}</p>
 					<!-- 상품 아이디에 대한 상세 정보 페이지가 연결되도록 상세 정보 버튼 작성 -->
 					<p>
-						<a href="../ch05/Product.jsp?id=${productVO.productId}"
+						<a href="Product.jsp?id=${productVO.productId}"
 						class="btn btn-secondary" role="button">상세정보&raquo;</a>
 					</p>
 				</div>

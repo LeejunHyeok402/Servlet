@@ -30,6 +30,7 @@ public class BookRepository {
 		html.setReleaseDate("2019/10/23");
 		html.setCondition("New");
 		
+		html.setFilename("B1235.png");
 		bookList.add(html);
 		
 		BookVO java = new BookVO("B1236","[IT 모바일] 쉽게 배우는 자바 프로그래밍",27000);
@@ -43,6 +44,7 @@ public class BookRepository {
 		java.setReleaseDate("2019/10/24");
 		java.setCondition("Old");
 		
+		java.setFilename("B1236.png");
 		bookList.add(java);
 		
 		BookVO spring = new BookVO("B1237","[IT 모바일] 스프링 입문",22000);
@@ -56,6 +58,7 @@ public class BookRepository {
 		spring.setReleaseDate("2019/10/25");
 		spring.setCondition("Refurbished");
 		
+		spring.setFilename("B1237.png");
 		bookList.add(spring);
 	}
 	

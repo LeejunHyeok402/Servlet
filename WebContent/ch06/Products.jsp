@@ -39,6 +39,8 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 			<!-- List<ProductVO> -> 한행을 까네오면 -> productVO -->
 			<c:forEach var="productVO" items="${listOfProducts}">
 				<div class="col-md-4">
+					<img alt="${productVO.pname}" title="${productVO.filename}" src="/resources/images/${productVO.filename}"
+					style="width:100%;height:350px;">
 					<h3>${productVO.pname}</h3>
 					<p>${productVO.description}</p>
 					<p>${productVO.unitPrice}</p>

@@ -23,22 +23,26 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		</div>
 	</div>
 	<div class="container">
-	<div class="col">
 	<a href="addBook.jsp" class="btn btn-secondary">책 추가</a>
-	</div>
+	
 		<c:forEach var="bookVO" items="${listOfBooks}">
-		<div class="row">			
+			<div class="row" align="left">
+		<div class="col-3">
+		<img alt="${bookVO.name}" src="/resources/images/${bookVO.filename}" style="width:100%;height:100%;">
+					
+		</div>
+		<div class="col-9">
 			<h3>${bookVO.name}</h3>
-				<div class="row">
 					<p class="col-md">${bookVO.desciption}</p>
 					<a href="./book.jsp?id=${bookVO.bookId}"
 					class="btn btn-secondary btn-sm" role="button" class="col-md-auto" style="height:30px">상세정보&raquo;</a>
-				</div>	
-			<p>${bookVO.author} | ${bookVO.publisher} | ${bookVO.unitPrice}</p>
-		</div>			
+			<p>${bookVO.author} | ${bookVO.publisher} | ${bookVO.unitPrice}</p>			
+		
+		</div>	
+		</div>
 		<hr>
 		</c:forEach>
-	</div>
+		</div>
 	<jsp:include page="footer.jsp"/>
 	
 </body>

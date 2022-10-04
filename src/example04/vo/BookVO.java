@@ -13,6 +13,8 @@ public class BookVO {
 	private String	releaseDate;
 	private String	condition;
 	
+	private String filename;
+	
 	public BookVO() {
 		
 	}
@@ -111,14 +113,20 @@ public class BookVO {
 		this.condition = condition;
 	}
 
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
+
 	@Override
 	public String toString() {
 		return "BookVO [bookId=" + bookId + ", name=" + name + ", unitPrice=" + unitPrice + ", author=" + author
 				+ ", desciption=" + desciption + ", publisher=" + publisher + ", categpry=" + categpry
 				+ ", unitsInStock=" + unitsInStock + ", totalPages=" + totalPages + ", releaseDate=" + releaseDate
-				+ ", condition=" + condition + "]";
+				+ ", condition=" + condition + ", filename=" + filename + "]";
 	}
-	
-	
 	
 }

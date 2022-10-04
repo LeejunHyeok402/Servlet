@@ -10,14 +10,14 @@
 <body>
 
 <%
-Enumeration paraNames = request.getParameterNames();
-while(paraNames.hasMoreElements()){
-	StringBuffer text = new StringBuffer((String)paraNames.nextElement());
-	out.println(text + " : ");
-	
-	String value = request.getParameter(text.toString());
-	out.println(value+"<br>");
-}
+	Enumeration paraNames = request.getParameterNames();
+	while(paraNames.hasMoreElements()){
+		StringBuffer text = new StringBuffer((String)paraNames.nextElement());
+		out.println(text + " : ");
+		
+		String value = request.getParameter(text.toString());
+		out.println(value+"<br>");
+		}
 %>
 
 </body>

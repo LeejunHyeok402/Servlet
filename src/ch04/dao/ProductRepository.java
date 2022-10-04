@@ -31,6 +31,8 @@ public class ProductRepository {
 		phone.setManufacturer("Apple");
 		phone.setUnitsInstock(1000);
 		phone.setCondition("New");
+		//ch07에서 추가
+		phone.setFilename("P1234.png");
 		
 		listOfProducts.add(phone);
 		
@@ -41,6 +43,8 @@ public class ProductRepository {
 		notebook.setManufacturer("LG");
 		notebook.setUnitsInstock(1000);
 		notebook.setCondition("Refurbished");
+		//ch07에서 추가
+		notebook.setFilename("P1235.png");
 		
 		listOfProducts.add(notebook);
 		
@@ -51,6 +55,8 @@ public class ProductRepository {
 		tablet.setManufacturer("Samsung");
 		tablet.setUnitsInstock(1000);
 		tablet.setCondition("Old");
+		//ch07에서 추가
+		tablet.setFilename("P1236.png");
 		
 		listOfProducts.add(tablet);
 	}
@@ -62,6 +68,7 @@ public class ProductRepository {
 	//INSERT INTO PRODUCT VALUES(...)
 	//객체 타입의 변수 listOfProducts에 새로운 상품 정보를 등록하는 메소드
 	public void addProduct(ProductVO productVO) {
+		//List<ProductVO>
 		listOfProducts.add(productVO);
 	}
 	

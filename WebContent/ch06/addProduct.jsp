@@ -4,12 +4,12 @@
 <html>
 <head>
 <link rel="stylesheet" 
-href="/resources/css/bootstrap.min.css">
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <title>상품 등록</title>
 </head>
 <body>
 	<!-- 머리글에 해당하는 menu.jsp 파일의 내용을 포함하도록 include 액션 태그를 작성 -->
-	<jsp:include page="../ch04/menu.jsp"/>
+	<jsp:include page="menu.jsp"/>
 	<div class="jumbotron">
 		<div class ="container">
 			<h1 class="display-3">상품 등록</h1>
@@ -28,7 +28,7 @@ href="/resources/css/bootstrap.min.css">
 				<div class="form-group row">
 				<label class = "col-sm-2">상품명</label>
 				<div class="col-sm-3">
-					<input type="text" name="productId" class="form-control">
+					<input type="text" name="pname" class="form-control">
 				</div>
 				</div>
 				<div class="form-group row">

@@ -8,6 +8,7 @@
 	List<BookVO> listOfBooks = BookDAO.getAllBooks();
 %>
 <c:set var="listOfBooks" value="<%=listOfBooks%>" scope="page"/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		</div>
 	</div>
 	<div class="container">
-	<a href="addBook.jsp" class="btn btn-secondary">책 추가</a>
+	
 	
 		<c:forEach var="bookVO" items="${listOfBooks}">
 			<div class="row" align="left">
@@ -43,6 +44,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<hr>
 		</c:forEach>
 		</div>
+		<a href="addBook.jsp" class="btn btn-secondary">책 추가</a>
 	<jsp:include page="footer.jsp"/>
 	
 </body>

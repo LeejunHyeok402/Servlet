@@ -18,7 +18,8 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	
 	<!-- ==============================상품상세시작============================== -->
 	<div class="container">
-		<form name="newProduct" action="processAddProduct.jsp" class="form-horizontal" method="post">
+		<form name="newProduct" action="processAddProduct.jsp" class="form-horizontal" 
+		method="post" enctype="multipart/form-data">
 			<div class="form-group row">
 				<label class = "col-sm-2">상품코드</label>
 				<div class="col-sm-3">
@@ -59,7 +60,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 				<div class="form-group row">
 				<label class = "col-sm-2">제고수</label>
 				<div class="col-sm-3">
-					<input type="text" name="unitsInstock" class="form-control">
+					<input type="text" name="unitsInStock" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -68,6 +69,13 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 					<input type="radio" name="condition" value="New">신규상품
 					<input type="radio" name="condition" value="Old">중고 상품
 					<input type="radio" name="condition" value="Refurbished"> 재생상품
+				</div>
+			</div>
+			<!-- 			 -->
+			<div class="form-group row">
+				<label class = "col-sm-2">이미지</label>
+				<div class="col-sm-5">
+					<input type="file" name="productImage" class="form-control"/>
 				</div>
 			</div>
 			<div class="form-group row">

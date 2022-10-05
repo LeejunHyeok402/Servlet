@@ -17,7 +17,7 @@
 <body>
     <%
     request.setCharacterEncoding("UTF-8");
-    String fileUploadPath = "C:\\upload";
+    String fileUploadPath = "C:\\Users\\PC-04\\Desktop\\JSPBook\\JSPBook\\WebContent\\resources\\images";
 	DiskFileUpload upload = new DiskFileUpload();
 	
 	//업로드 객체 환경설정

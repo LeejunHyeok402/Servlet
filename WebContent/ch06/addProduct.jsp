@@ -20,7 +20,6 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 			<h1 class="display-3"><fmt:message key="title"/></h1>
 		</div>
 	</div>
-	
 	<!-- ==============================상품상세시작============================== -->
 	<div class="container">
 		<div class="text-right">

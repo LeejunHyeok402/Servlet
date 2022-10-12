@@ -4,11 +4,13 @@
 <%@page import="ch04.vo.ProductVO"%>
 <%@page import="java.util.List"%>
 <%@page import="ch04.dao.ProductRepository"%>
+<%@ page errorPage="exceptionNoProductId.jsp"%>
+<!-- 상품 아이디가 없을때  exceptionNoProductId.jsp를 요청-->
 <!DOCTYPE html>
 <%	//스트립틀릿 태그
 	//상세보기 => ProductVO을 리턴
 	//SELECT * FROM PRODUCT WHERE PRODUCT_ID = 'P1235'
-	String id = request.getParameter("id");
+	String id = request.getParameter("id").toString();
 	ProductRepository productRepository = ProductRepository.getInstance();
 	ProductVO productVO = productRepository.getProductById(id);
 %>

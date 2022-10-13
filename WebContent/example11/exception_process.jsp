@@ -8,7 +8,7 @@
 <body>
 	<% String id = request.getParameter("id");
 	if(id.length() == 0){
-		throw new ServletException();
+		throw new ServletException("요청 파라미터가 없습니다.");
 	}
 		String password = request.getParameter("password");
 		out.print(id+" : "+password);

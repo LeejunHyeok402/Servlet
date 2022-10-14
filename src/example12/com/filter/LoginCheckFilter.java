@@ -1,3 +1,4 @@
+
 package example12.com.filter;
 
 import java.io.IOException;
@@ -53,6 +54,7 @@ public class LoginCheckFilter implements Filter{
 			message = "로그인 실패했습니다.";
 			writer.println(message);
 		}
+		
 		
 		chain.doFilter(request, response);
 		

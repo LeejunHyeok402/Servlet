@@ -76,4 +76,25 @@
   	<filter-name>filter</filter-name>
   	<url-pattern>/example12/loginForm_process.jsp</url-pattern>
   </filter-mapping>
+  <!-- 모든 URI 요청 처리 전에  LogFilter를 실행  -->
+  	<filter>
+		<filter-name>LogFilter</filter-name>
+		<filter-class>filter.LogFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LogFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>Filter02_2</filter-name>
+		<filter-class>filter.LogFileFilter</filter-class>
+		<init-param>
+			<param-name>filename</param-name>
+			<param-value>C:\logs\JSPBook.log</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filter02_2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>

@@ -22,6 +22,19 @@
 <link rel="stylesheet" 
 href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <title>상품 상세 정보</title>
+<script type="text/javascript">
+	//핸들러 함수(상품 주문 버튼 클릭 시 실행)
+	function addToCart(){
+		let result = confirm("상품을 장바구니에 추가하시겠습니까?");
+		if(result){	//true
+			console.log("true");
+			document.addForm.submit();
+		}else{	//false
+			console.log("false");
+			document.addForm.reset();
+		}
+	}
+</script>
 </head>
 <body>
 	<!-- 머리글에 해당하는 menu.jsp 파일의 내용을 포함하도록 include 액션 태그를 작성 -->
@@ -51,10 +64,15 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 				<p><b><fmt:message key="unitsInstock"/></b>: ${productVO.unitsInstock}</p>
 				<h4>${productVO.unitPrice}<fmt:message key="productPrice"/></h4>
 				<p>
-				<a href="#" class="btn btn-info"><fmt:message key="productOrder"/>&raquo;</a>
-				<a href="./Products.jsp" class="btn btn-secondary"><fmt:message key="productList"/>&raquo;</a>
+				<form name="addForm" action="addCart.jsp?id=${productVO.productId}" method="post">
+				<!--  상품주문 -> 상품을 장바구니에 넣음 -->
+				<a href="#" class="btn btn-info" onclick="addToCart()"><fmt:message key="productOrder"/>&raquo;</a>
+				<!-- 장바구니에 넣어진 상품 목록을 봄 -->
+				<a href="cart.jsp" class="btn btn-warning">장바구니&raquo;</a>
+				<!-- 메인으로 돌아가기 -->
+				<a href="Products.jsp" class="btn btn-secondary"><fmt:message key="productList"/>&raquo;</a>
+				</form>
 				</p>
-				
 			</div>
 		</div>	
 	</div>

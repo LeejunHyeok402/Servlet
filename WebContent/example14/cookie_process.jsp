@@ -10,10 +10,14 @@
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
+		
+		
 		if(id.equals("admin")&&pw.equals("1234")){
-			session.setAttribute("user_id", id);
+			Cookie cookieId = new Cookie("userId",id);
+			response.addCookie(cookieId);
 		}else{
-			session.setAttribute("user_id", "");
+			Cookie cookieId = new Cookie("userId","");
+			response.addCookie(cookieId);
 		}
 			response.sendRedirect("welcome.jsp");
 	%>
